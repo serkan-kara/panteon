@@ -20,3 +20,19 @@ Manage
 3) http://localhost:5000/api/manage/endWeek
     - this endpoint will end the week and distribute prize money on MONGODB
 ```
+
+There is also node-cron module installed for task schedules. You can manage manually from endpoints or use scheduled tasks. If you want to enable / disable node-cron module you can comment or uncomment below code inside index.
+
+```
+task.shedule(() => {
+
+});
+```
+
+### Modules used in node project
+* [dotenv]('https://github.com/motdotla/dotenv')
+* [express]('https://github.com/expressjs/express')
+* [mongoose]('https://github.com/Automattic/mongoose')
+* [node-cron]('https://github.com/node-cron/node-cron')
+* [redis]('https://github.com/redis/node-redis')
+* [colors]('https://github.com/Marak/colors.js')
