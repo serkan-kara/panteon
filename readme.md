@@ -1,8 +1,10 @@
 # Panteon Demo Project
 
-## This project made for Panteon Games
+##### This project made for Panteon Games
 
 I used 10.000 random user data and random money values. To not to add extra logic on demo I decided not to take of money in mongodb. You can use postman or localhost:3000/dashboard route in react project for manage endpoints. Leaderboard is in main route at localhost:3000/
+
+Credentials used in project can be found under server/config/ folder. I used MongoDB Atlas as MONGODB database and mongo uri is my own account. Redis url set to localhost ( 127.0.0.1:6379 ). You can change redis url if you want.
 
 There is 4 total endpoints, 1 for leaderboard and 3 for management
 ```
@@ -29,10 +31,12 @@ task.shedule(() => {
 });
 ```
 
+
+
 ### Modules used in node project
-* [dotenv]('https://github.com/motdotla/dotenv')
-* [express]('https://github.com/expressjs/express')
-* [mongoose]('https://github.com/Automattic/mongoose')
-* [node-cron]('https://github.com/node-cron/node-cron')
-* [redis]('https://github.com/redis/node-redis')
-* [colors]('https://github.com/Marak/colors.js')
+* [dotenv](https://github.com/motdotla/dotenv)
+* [express](https://github.com/expressjs/express)
+* [mongoose](https://github.com/Automattic/mongoose)
+* [node-cron](https://github.com/node-cron/node-cron)
+* [redis](https://github.com/redis/node-redis)
+* [colors](https://github.com/Marak/colors.js)
