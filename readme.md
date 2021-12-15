@@ -17,10 +17,10 @@ Manage
     - this endpoint will reset all data and start fresh week
 
 2) http://localhost:5000/api/manage/nextDay
-    - this endpoint will move to next day
+    - this endpoint will move to next day, after 7 days this will reset back to start
 
 3) http://localhost:5000/api/manage/endWeek
-    - this endpoint will end the week and distribute prize money to players on MONGODB
+    - this endpoint will end the week and distribute prize money to players on MONGODB. Note: endweek doesn't reset to fresh week. you need to manually start new week. it could be done but it's a choice to not make it complex.
 ```
 
 There is also node-cron module installed for task schedules. You can manage project manually from endpoints or use scheduled tasks. If you want to enable / disable node-cron module you can comment / uncomment below code inside config/db.js
@@ -28,6 +28,12 @@ There is also node-cron module installed for task schedules. You can manage proj
 ```
 await schedule();
 ```
+
+Frontend focus on 1 user, you can change it inside components/board/board.js
+```
+const myPlayer = '61b4b6f1d72a78aa8444cac6';
+```
+
 ### Modules used in node project
 * [dotenv](https://github.com/motdotla/dotenv)
 * [express](https://github.com/expressjs/express)

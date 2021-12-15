@@ -53,7 +53,7 @@ const initializeRedisDatabase = async () => {
     await client.quit();
 
     // start schedule after MONGO and REDIS initialized
-    await schedule();
+    //await schedule();
 }
 
 module.exports = connectToDatabase;

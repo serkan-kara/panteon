@@ -1,8 +1,14 @@
 import React from 'react';
+import PageContainer from '../components/pageContainer/pageContainer';
+import Header from '../components/header/header';
+import DashboardPage from '../components/dashboard/dashboard';
 
 const Dashboard = () => {
     return (
-        <div>Dashboard</div>
+        <PageContainer>
+            <Header />
+            <DashboardPage />
+        </PageContainer>
     )
 }
 
