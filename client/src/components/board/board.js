@@ -130,7 +130,6 @@ const Board = (props) => {
                 setPlayers(result.top);
                 setMyRank(result.me);
                 setPrize(result.prize);
-                console.log(result);
             }, (error) => {
                 setIsLoaded(true);
                 console.log(error);

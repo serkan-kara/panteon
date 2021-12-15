@@ -7,7 +7,6 @@ const schedule = async () => {
     // 59 23 * * * => this will run every day at 23:59
     cron.schedule('* * * * *', async () => {
         await moveToNextDay();
-        console.log('Moving to next day every minute!');
     });
 }
 
