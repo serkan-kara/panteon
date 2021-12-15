@@ -1,6 +1,7 @@
 const mongoose = require('mongoose');
 const client = require('./redis');
 const Player = require('../models/Player');
+const schedule = require('../services/scheduler');
 
 const connectToDatabase = async () => {
     try {
@@ -50,6 +51,9 @@ const initializeRedisDatabase = async () => {
 
     console.log(` REDIS database working on ${process.env.REDIS_URL} `.yellow.inverse);
     await client.quit();
+
+    // start schedule after MONGO and REDIS initialized
+    await schedule();
 }
 
 module.exports = connectToDatabase;

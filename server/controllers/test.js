@@ -55,6 +55,21 @@ exports.testCreateDummyData = async (req, res, next) => {
     res.json(result);
 }
 
+exports.testRecountryData = async (req, res, next) => {
+    const src = fs.createReadStream('./data/1.json');
+    let result = await streamToJSON(src);
+
+    for (player of result) {
+        const pl = await Player.findById(player._id);
+        pl.country = player.country;
+        await pl.save();
+    }
+
+    res.json({
+        success: true
+    })
+}
+
 function streamToJSON(stream) {
     const chunks = [];
     return new Promise((resolve, reject) => {

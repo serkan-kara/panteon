@@ -21,13 +21,13 @@ app.use(express.json());
 
 // route files
 const week = require('./routes/week');
-const tests = require('./routes/test');
 const board = require('./routes/board');
+const tests = require('./routes/test');
 
 // mount routes
-app.use('/api/week', week);
-app.use('/api/test', tests);
 app.use('/api/board', board);
+app.use('/api/manage', week);
+app.use('/api/test', tests);
 
 // start server
 const server = app.listen(
